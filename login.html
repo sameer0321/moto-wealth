@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -20,11 +21,13 @@
       object-fit: cover;
       z-index: -1;
     }
+
     .error-message {
       color: red;
       font-size: 0.9em;
       margin-top: 5px;
     }
+
     .success-message {
       color: green;
       font-size: 0.9em;
@@ -50,25 +53,13 @@
         <form id="loginForm" method="POST">
           <div class="form-group">
             <div class="fxt-transformY-50 fxt-transition-delay-3">
-              <input
-                type="text"
-                class="form-control"
-                name="phoneno"
-                id="phoneno"
-                placeholder="Phone No"
-                required="required"
-              />
+              <input type="text" class="form-control" name="phoneno" id="phoneno" placeholder="Phone No"
+                required="required" />
             </div>
             <br />
             <div class="fxt-transformY-50 fxt-transition-delay-3">
-              <input
-                type="password"
-                class="form-control"
-                name="password"
-                id="password"
-                placeholder="Password"
-                required="required"
-              />
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password"
+                required="required" />
             </div>
             <br />
             <div id="formMessage" class="error-message"></div>
@@ -117,7 +108,7 @@
       };
 
       try {
-        const res = await fetch("http://127.0.0.1:4000/api/v1/login", {
+        const res = await fetch("https://moto-final.onrender.com/api/v1/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
@@ -144,4 +135,5 @@
     });
   </script>
 </body>
+
 </html>
